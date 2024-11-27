@@ -32,10 +32,10 @@ jobs:
             ${{ runner.os }}-node-
         # Runs a single command using the runners shell
       - name: pnpm install
-        run: npm install -g pnpm --registry https://registry.npm.taobao.org
+        run: npm install -g pnpm 
       - name: Install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm config set registry https://registry.npm.taobao.org && pnpm i
+        run: pnpm i
 
       - name: Build
         run: npm run build
