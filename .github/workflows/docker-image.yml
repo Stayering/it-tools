@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.HUB_GITHUB_TOKEN }} # 需要去 https://github.com/settings/tokens 生成一个 名为 token，注意此token 需要读写 packages 等权限 
       - uses: actions/setup-node@v2
         with:
-          node-version: "16.14"
+          node-version: "18.12"
       - uses: actions/cache@v2
         id: cache
         with:
