@@ -46,4 +46,4 @@ jobs:
         run:
           | # 使用 上一步写的 Dockerfile 构建镜像并发布到私有仓库； 发布完成可以去 https://github.com/MrGaoGang?tab=packages 查看
           docker build . --file Dockerfile --tag it-tools:latest
-          docker push ghcr.io/stayering/it-tools:latest
+          docker push it-tools:latest
