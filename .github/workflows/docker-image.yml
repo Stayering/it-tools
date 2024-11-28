@@ -44,6 +44,7 @@ jobs:
 
       - name: Build the  Docker image
         run:
+          echo ${{ secrets.HUB_GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           | # 使用 上一步写的 Dockerfile 构建镜像并发布到私有仓库； 发布完成可以去 https://github.com/MrGaoGang?tab=packages 查看
           docker build . --file Dockerfile --tag it-tools:latest
           docker push it-tools:latest
